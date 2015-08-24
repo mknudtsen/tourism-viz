@@ -1,0 +1,512 @@
+latam <- read.csv("data/latinDataTotal.csv")
+head(latam)
+arrDept <- latam$intlArrivals / latam$intlDepartures
+arrDept
+shiny::runApp()
+head(latam)
+library(WDI)
+?WDI
+WDIsearch("expenditures")
+WDIsearch("receipts")
+WDIsearch("tourism")
+exp <- WDI(indicator="ST.INT.XPND.CD", country=latinAm, start=2000, end=2012)
+latinAm <- c("AR", "BO", "BR", "CL", "CO", "EC", "PY", "PE", "UY", "VE",
+"BZ", "CR", "GT", "HN", "MX", "NI", "PA",
+"PR", "DO", "CU",
+"FR", "US", "CN")
+exp <- WDI(indicator="ST.INT.XPND.CD", country=latinAm, start=2000, end=2012)
+head(exp)
+colnames(exp) <- c("iso", "country", "intlExpenditures", "year")
+head(exp)
+head(latam)
+latam <- merge(latam, exp, by=c("iso", "country", "year"))
+head(latam)
+head(latam)
+latam <- latam[c(4, 1, 2, 3, 5, 6, 9, 11, 10, 8, 7)]
+head(latam)
+latam
+write.csv(latam, "data/latamTotal.csv")
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+latam
+countries <- latam$country
+countries
+str(countries)
+hof <- read.csv("~/Downloads/hofstede.csv")
+hof
+hof <- subset(hof, country %in% countries)
+hof
+hof <- read.csv("~/Downloads/hofstede.csv")
+iso <- latam$iso
+hof <- subset(hof, ctr %in% iso)
+hof
+colnames(hof) <- c("iso", "country", "pdi", "idv", "mas", "uai", "ltowvs", "ivr")
+hof
+new <- subset(hof, na.rm=TRUE)
+new
+new
+hof
+na.omit(hof)
+null.omit(hof)
+hof[complete.cases(hof),
+hof[complete.cases(hof),]
+hof[complete.cases(hof),]
+hof[complete.cases(hof),]
+hof <- read.csv("~/Downloads/hofstede.csv")
+hof <- subset(hof, ctr %in% iso)
+hof
+colnames(hof) <- c("iso", "country", "pdi", "idv", "mas", "uai", "ltowvs", "ivr")
+hof
+hof[complete.cases(hof),]
+hof <- hof[complete.cases(hof),]
+hof
+getwd()
+write.csv(hof, "data/hofstede.csv")
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+latam
+head(latam)
+shiny::runApp()
+head(latam)
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+ids
+ids <- unique(latam$iso)
+ids
+top <- as.logical(ids != c("BR", "MX", "CO", "CU"))
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+?nplot
+?nPlot
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+str(latam)
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+str(latam)
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+?selectInput
+?if
+dfasd
+?if()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+head(latam)
+arr2012 <- subset(latam, year = 2012)
+arr2012
+arr2012 <- subset(latam, year == 2012)
+arr2012
+p2 <- nPlot(
+~ intlArrivals,
+group = "country",
+data = arr2012,
+type = "discreteBarChart")
+)
+p2 <- nPlot(
+~ intlArrivals,
+group = "country",
+data = arr2012,
+type = "discreteBarChart")
+p2
+p2 <- nPlot(
+intlArrivals ~ country,
+data = arr2012,
+type = "discreteBarChart")
+p2
+p2 <- nPlot(
+intlArrivals ~ country,
+data = arr2012,
+type = "multiBarHorizontalChart")
+p2
+?sort
+?order
+new <- arr2012[order(intlArrivals),]
+head(arr2012)
+new <- arr2012[order(intlArrivals),]
+new <- arr2012[order(gdpPPP),]
+arr2012 <- subset(latam, year == 2012)
+head(arr2012)
+newdata <- arr2012[order(iso),]
+newdata <- arr2012[order(intlArrivals),]
+newdata <- arr2012[order(country),]
+newdata <- arr2012[order(iso),]
+head(newdata)
+View(arr2012)
+View(newdata)
+View(arr2012)
+newdata <- arr2012[order(-arr2012$intlArrivals),]
+head(newdata)
+p2 <- nPlot(
+intlArrivals ~ country,
+data = newdata,
+type = "multiBarHorizontalChart")
+p2
+p2 <- nPlot(
+(intlArrivals / 1000000) ~ country,
+data = newdata,
+type = "multiBarHorizontalChart")
+p2
+p2 <- nPlot(
+intlArrivals ~ country,
+data = newdata,
+type = "multiBarHorizontalChart")
+p2
+p2 <- nPlot(
+intlArrivals ~ country,
+data = newdata,
+group = "country"
+type = "multiBarHorizontalChart")
+p2 <- nPlot(
+intlArrivals ~ country,
+data = newdata,
+group = "country",
+type = "multiBarHorizontalChart")
+p2
+p2 <- nPlot(
+~ intlArrivals,
+data = newdata,
+group = "country",
+type = "multiBarHorizontalChart")
+p2
+p2 <- nPlot(
+intlArrivals ~ country,
+data = newdata,
+type = "multiBarHorizontalChart")
+p2
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+latam
+latam <- read.csv("data/latamTotal.csv")
+latam <- latam[!(latam$iso %in% c("CN", "BZ", "PY", "HN", "FR", "VE", "UY")),]
+head(latam)
+growth <- latam[c("iso", "country", "year", "intlArrivals")]
+head(growth)
+libary(plyr)
+library(plyr)
+ddply(df, "country", transform,
+Growth=c(NA, exp(diff(log(intlArrivals))) -1))
+ddply(growth, "country", transform,
+Growth=c(NA, exp(diff(log(intlArrivals))) -1))
+growSub <- subset(growth, year %in% c(2011, 2012))
+growSub
+View(exp)
+View(growth)
+ddply(growth, "country", transform,
+Growth=c(NA, exp(diff(log(intlArrivals))) -1))
+growth <- ddply(growth, "country", transform,
+Growth=c(NA, exp(diff(log(intlArrivals))) -1))
+growSub <- subset(growth, year %in% c(2011, 2012))
+growSub
+test1 <- nPlot(
+Growth ~ country,
+data = growSub,
+type = "multiBarHorizontalChart")
+test1
+test1 <- nPlot(
+Growth ~ country,
+data = growSub,
+group = "year",
+type = "multiBarHorizontalChart")
+test1
+current <- growSub[order(-growSub$Growth),]
+test1 <- nPlot(
+Growth ~ country,
+data = current,
+group = "year",
+type = "multiBarHorizontalChart")
+test1
+growSub <- subset(growth, year %in% c(2010, 2011, 2012))
+current <- growSub[order(-growSub$Growth),]
+test1 <- nPlot(
+Growth ~ country,
+data = current,
+group = "year",
+type = "multiBarHorizontalChart")
+test1
+shiny::runApp()
+current <- growSub[order(-subset(growSub$Growth, year = 2012)),]
+growSub <- subset(growth, year %in% c(2011, 2012))
+current <- growSub[order(-(growSub$Growth),]
+current <- growSub[order(-growSub$Growth),]
+test1 <- nPlot(
+Growth ~ country,
+data = current,
+group = "year",
+type = "multiBarHorizontalChart")
+test1
+growSub <- subset(growth, year %in% c(2011, 2012))
+current <- growSub[order(-growSub$year, -growSub$Growth),]
+test1 <- nPlot(
+Growth ~ country,
+data = current,
+group = "year",
+type = "multiBarHorizontalChart")
+test1
+growSub <- subset(growth, year %in% c(2009, 2010, 2011, 2012))
+current <- growSub[order(-growSub$year, -growSub$Growth),]
+test1 <- nPlot(
+Growth ~ country,
+data = current,
+group = "year",
+type = "multiBarHorizontalChart")
+test1
+growSub <- subset(growth, year %in% c(2011, 2012))
+current <- growSub[order(-growSub$year, -growSub$Growth),]
+test1 <- nPlot(
+Growth ~ country,
+data = current,
+group = "year",
+type = "multiBarHorizontalChart")
+test1
+head(current)
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+head(current)
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+library(shinyapps)
+deployApp()
+deployApp()
+deployApp()
+shiny::runApp()
+deployApp()
+deployApp()
+shiny::runApp()
+deployApp()
+shiny::runApp()
+deployApp()
+deployApp()
+deployApp()
+deployApp()
+devtools::install_github("phyloseq", "joey711")
+devtools::install_github("phyloseq", "joey711/philoseq")
+library(devtools)
+devtools::install_github("phyloseq", "joey711")
+install_github("phyloseq", "joey711")
+shiny::runGitHub("shiny-phyloseq","joey711")
+source("http://bioconductor.org/biocLite.R")
+biocLite("DESeq2")
+shiny::runGitHub("shiny-phyloseq","joey711")
+source("http://bioconductor.org/biocLite.R")
+biocLite("phyloseq")
+shiny::runGitHub("shiny-phyloseq","joey711")
+library(phyloseq)
+install.packages("d3Network")
+shiny::runGitHub("shiny-phyloseq","joey711")
+install.packages("png")
+shiny::runGitHub("shiny-phyloseq","joey711")
+wdisearch
+?wdi
+?WDI
+WDIsearch("shipping")
+WDIsearch("shipping")
+shiny::runGitHub("shiny-phyloseq","joey711")
+shiny::runGitHub("shiny-phyloseq","joey711")
+vignette("phyloseq")
+vignette("phyloseq-analysis")
+vignette(shiny-phyloseq)
+vignette("phyloseq-basics")
+shiny::runGitHub("shiny-phyloseq","joey711")
+install.packages("bootstrap")
+shiny::runGitHub("shiny-phyloseq","joey711")
+shiny::runGitHub("shiny-phyloseq","joey711")
+devtools::source_url("https://raw.githubusercontent.com/joey711/shiny-phyloseq/master/install.R")
+shiny::runGitHub("shiny-phyloseq","joey711")
+# d3 code section
+getwd()
+cd
+ls
+setwd("~/development/git/shiny-phyloseq")
+runApp()
+runApp()
+runApp()
+NodeData
+input$d3_node_label
+runApp()
+runApp()
+shiny::runGitHub("shiny-phyloseq","joey711")
+runApp()
+library(shinyapps)
+runApp()
+library(shiny)
+runApp()
+getwd()
+setwd("~/development/git/shiny-phyloseq/")
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+#output$D3Network <- renderForceNetwork({
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+vanilla_install_pkgs = c("data.table", "genefilter", "ggplot2",
+"grid", "gridExtra", "markdown", "png",
+"rmarkdown", "RColorBrewer", "scales", "networkD3", "htmlwidgets")
+download_not_installed(vanilla_install_pkgs)
+runApp()
+vanilla_install_pkgs
+runApp()
+library(networkD3)
+library(htmlwidgets)
+library(shiny)
+runApp()
+runApp()
+runApp()
+install.packages("bootstrap")
+library(bootstrap)
+runApp()
+runApp()
+library(shiny)
+runApp()
+setwd("~/development/git/shiny-phyloseq/")
+runApp()
+library()
+search()
+library(networkD3)
+runApp()
+runApp()
+search()
+search()
+getwd()
+setwd("~/development/git/shiny-phyloseq/")
+runApp()
+search()
+library(shiny)
+runApp()
+runApp()
+runApp()
+runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+shiny::runApp()
+setwd("~/development/git/shiny-phyloseq_UPDATE/")
+ls
+getwd()
+shiny::runApp('~/development/git/shiny-phyloseq')
+shiny::runApp('~/development/git/shiny-phyloseq')
+shiny::runApp('~/development/git/shiny-phyloseq')
+shiny::runApp('~/development/git/shiny-phyloseq')
+library(shinyapps)
+deployApp()
+setwd("~/development/git/shiny-phyloseq/")
+library(shinyapps)
+load("~/development/git/shiny-phyloseq/global.R")
